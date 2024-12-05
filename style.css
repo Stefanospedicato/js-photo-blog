@@ -27,7 +27,8 @@ header h1{
 
 .card-text{
   font-family: 'italianno';
-  font-size: 2rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
 .card{
