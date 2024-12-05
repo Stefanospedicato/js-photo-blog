@@ -78,6 +78,7 @@ header h1{
   top: -35px;
   left: -10px;
   z-index: 10;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 #overlay img{
