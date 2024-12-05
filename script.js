@@ -13,13 +13,14 @@ axios.get(endpoint)
 function printCard(album){
   const {url , id,  title} = album;
   container.innerHTML += `
-   <div class="card">
-          <div class="justify-content-center d-flex">
-            <img src="${url}" alt="${id}">
-          </div>
-          <div class="mx-3 my-3">
-            <p class="card-text">${title}</p>
-          </div>
-        </div> 
-  `
+  <div class="card">
+        <div class="pin-container"><img class="pin" src="img/pin.svg" alt="pin"></div>
+        <div class="justify-content-center d-flex">
+          <img src="${url}" alt="${id}">
+        </div>
+        <div class="mx-3 my-3">
+          <p class="card-text">${title}</p>
+        </div>
+      </div> 
+ `
 }

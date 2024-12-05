@@ -34,15 +34,19 @@ header h1{
   background-color: white;
   margin: 10px;
   width: 350px;
+  position: relative;
 }
 
 .card img{
   width: 320px;
   margin: 10px;
   margin-top: 10px;
-  position: relative;
-  top: 0;
-  left: 0;
 }
 
+.card .pin{
+  position:absolute;
+  top: -20px;
+  left: 145px;
+  width: 40px;
+}
 /* ********* /MAIN ********* */
