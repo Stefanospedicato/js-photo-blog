@@ -14,7 +14,7 @@ header{
   height: 150px;
   width: 100%;
   background-image: url(img/wall.png);
-  z-index: 100;
+  z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
@@ -51,6 +51,8 @@ header h1{
   width: 350px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   border-radius: 0;
+  cursor: pointer;
+  transition: all 1s;
 }
 
 .card img{
@@ -65,11 +67,20 @@ header h1{
   left: 145px;
   width: 40px;
 }
-/* .overlay{
- opacity:0.8;
-} */
 
-.overlay img{
+.card:hover{
+  transform: scale(1.1);
+  box-shadow: 9px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#overlay{
+  position: absolute;
+  top: -35px;
+  left: -10px;
+  z-index: 10;
+}
+
+#overlay img{
   width: 700px;
 }
 /* ********* /MAIN ********* */
