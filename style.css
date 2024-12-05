@@ -65,4 +65,11 @@ header h1{
   left: 145px;
   width: 40px;
 }
+/* .overlay{
+ opacity:0.8;
+} */
+
+.overlay img{
+  width: 700px;
+}
 /* ********* /MAIN ********* */
