@@ -56,3 +56,12 @@ Spostandosi col mouse sopra le foto, queste si zoommano, ruotano di 10 gradi e l
 - Qui ho destrutturato l'oggetto album richiamando solo le tre proprietà di cui necessitavo.
 - In seguito ho concatenato nel mio container.innerHTML tutte le card degli album con i template literal posizionati dove necessari.
 - Sono tornato nel then dell'axios, dove con il metodo forEach ho iterato il mio array richiamando la mia funzione per stampare le card.
+- Dopo tutto ciò sono passato all'overlay, creandolo innanzitutto in html con un immagine prova e posizionando tutto il blocco con position esattamente sopra le mie card.
+- Una volta pronto gli ho attribuito la classe d-none per non visualizzarlo di default e l'ho copiato nel file js in attesa di suo utilizzo.
+- Ho creato la funzione per la stampa dell'overlay in html e quindi in pagina, come ho fatto per le card, ma senza il bisogno di dover concatenare.
+- Ho ragionato poi sugli eventi da qui in poi che mi serviva scatenare: il click sulle card e sul btn dell'overlay una volta comparso.
+- Ho creato una nuova funzione che mi racchiudeva tutto ciò:
+  - qui ho passato come parametro l'album e ho richiamato tutte le carte, ormai stampate, con un unico queryselectorall, salvandole in una const.
+  - Ho usato poi un ciclo forEach (passando 2 parametri) su questa const per iterare tutte le mie card.
+  - Ho attribuito sulla singola card l'addEventListener per il click, utilizzando direttamente una funzione anonima per far comparire l'overlay con l'immagine della card cliccata utilizzando il suo indice
+  - Per il bottone ho semplicemente attribuito al click la riassegnazione della classe 'd-none' all'overlay per farlo sparire.

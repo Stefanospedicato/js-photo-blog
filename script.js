@@ -4,9 +4,10 @@ const overlay = document.getElementById('overlay')
 
 axios.get(endpoint)
 .then(res => {
-  container.innerHTML=''
-  res.data.forEach(album => printCard(album));
-  addClickEvents(res.data);
+  container.innerHTML='';
+  const albums = res.data;
+  albums.forEach(album => printCard(album));
+  addClickEvents(albums);
 })      
 
 .catch(e=>{
@@ -31,16 +32,16 @@ function printCard(album){
 function printOverlay(album){
   const {url , id} = album
   overlay.innerHTML = `
-  <button class="btn btn-secondary my-5">Chiudi</button>
+  <button class="btn btn-danger fw-bolder my-5">CHIUDI</button>
   <img src="${url}" alt="${id}">
   `
 }
 
-function addClickEvents (album){
+function addClickEvents (albums){
   const cards = document.querySelectorAll('.card')
   cards.forEach((card, index) => {
     card.addEventListener('click', ()=>{
-      printOverlay(album[index])
+      printOverlay(albums[index])
       overlay.classList.remove('d-none')
 
       const btn = document.querySelector('.btn')
