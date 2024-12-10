@@ -69,7 +69,7 @@ header h1{
 }
 
 .card:hover{
-  transform: scale(0.95);
+  transform: scale(1.1) rotate(10deg);
   box-shadow: 9px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
